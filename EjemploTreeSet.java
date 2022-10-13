@@ -12,4 +12,16 @@ public class EjemploTreeSet {
     public String mostrar(){
         return (implementoLTreeSet + "");
     }
+    public void remover(int algo){
+        implementoLTreeSet.remove(algo);
+    }
+    public boolean existeElemento(int algo){
+        return implementoLTreeSet.contains(algo);
+    }
+    public int nrosDeLaList(){
+        return implementoLTreeSet.size();
+    }
+    public void removerTodo(){
+        implementoLTreeSet.clear();
+    }
 }

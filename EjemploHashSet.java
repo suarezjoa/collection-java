@@ -16,5 +16,17 @@ public class EjemploHashSet  {
     public String mostrar(){
         return (implementoHash + "");
     }
+    public boolean existeElemento(Object algo){
+        return implementoHash.contains(algo);
+    }
+    public void remover(Object algo){
+        implementoHash.remove(algo);
+    }
+    public int nrosDeLaList(){
+    return implementoHash.size();
+    }
+    public void removerTodo(){
+        implementoHash.clear();
+    }
     
 }
