@@ -9,9 +9,9 @@ import java.util.Set;
 //
 
 public class EjemploLinkedHashSet  {
-    Set<String> implementoLinkedHashSet = new LinkedHashSet<>();
+    Set<Object> implementoLinkedHashSet = new LinkedHashSet<>();
 
-    public void Añadir(String algo){ 
+    public void agregar(Object algo){ 
         implementoLinkedHashSet.add(algo);
     }
     public String mostrar(){

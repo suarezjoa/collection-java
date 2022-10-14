@@ -8,9 +8,11 @@ import java.util.Set;
 // no existe un metodo para recuperar un elemento en alguna posicion
 
 public class EjemploHashSet  {
-    Set<String> implementoHash = new HashSet<>();
+    Set<Object> implementoHash = new HashSet<>();
 
-    public void Añadir(String algo){ 
+
+
+    public void agregar(Object algo){ 
         implementoHash.add(algo);
     }
     public String mostrar(){

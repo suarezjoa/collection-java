@@ -4,18 +4,22 @@ import java.util.Set;
 // Los elementos del conjunto se almacenan de Menor a MAYOR
 
 public class EjemploTreeSet {
-    Set<Integer> implementoLTreeSet = new TreeSet<>();
+    Set<Object> implementoLTreeSet = new TreeSet<>();
 
-    public void Añadir(int algo){ 
+
+
+    
+
+    public void agregar(Object algo){ 
         implementoLTreeSet.add(algo);
     }
     public String mostrar(){
         return (implementoLTreeSet + "");
     }
-    public void remover(int algo){
+    public void remover(Object algo){
         implementoLTreeSet.remove(algo);
     }
-    public boolean existeElemento(int algo){
+    public boolean existeElemento(Object algo){
         return implementoLTreeSet.contains(algo);
     }
     public int nrosDeLaList(){
@@ -23,5 +27,11 @@ public class EjemploTreeSet {
     }
     public void removerTodo(){
         implementoLTreeSet.clear();
+    }
+    public Set<Object> getImplementoLTreeSet() {
+        return implementoLTreeSet;
+    }
+    public void setImplementoLTreeSet(Set<Object> implementoLTreeSet) {
+        this.implementoLTreeSet = implementoLTreeSet;
     }
 }
