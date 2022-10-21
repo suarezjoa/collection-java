@@ -6,6 +6,7 @@ import java.util.Set;
 // no se puede duplicar elemntos en esta collecion
 // puede o no tener un orden
 // no existe un metodo para recuperar un elemento en alguna posicion
+// Ejemplo saber si tenes libros en la lista.
 
 public class EjemploHashSet  {
     Set<Object> implementoHash = new HashSet<>();

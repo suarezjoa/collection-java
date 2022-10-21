@@ -12,16 +12,24 @@ public class EjemploHastTable {
     public void remplazarValor(String clave,Object elem){
         htpersona.put(clave, elem);
     }
-    public void remplazarClave(String Clave, Object elem, String nuevaClave){
-        htpersona.replace(Clave,elem,nuevaClave);
-    }
 
     public void eliminar(String clave){
         htpersona.remove(clave);
     }
-
-    public void mostrarTabla(String clave, Object elem){
-        htpersona.values();
+    public Object mostrarElemento(String clave){
+        return htpersona.get(clave);
     }
+
+    public Object mostrarTabla(){
+        return htpersona.values();
+    }
+
+    public Hashtable<String, Object> getHtpersona() {
+        return htpersona;
+    }
+    public void setHtpersona(Hashtable<String, Object> htpersona) {
+        this.htpersona = htpersona;
+    }
+    
 
 }

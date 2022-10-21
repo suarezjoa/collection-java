@@ -3,7 +3,7 @@ import java.util.Collection;
 import java.util.TreeSet;
 
 import javax.swing.table.AbstractTableModel;
-
+// EJemplo se utiliza cuando 
 public class EjemploAbsSet {
     AbstractSet<Object> abs_set = new TreeSet<>();
 

@@ -2,13 +2,10 @@ import java.util.TreeSet;
 import java.util.Set;
 
 // Los elementos del conjunto se almacenan de Menor a MAYOR
-
+// Ejemplo de implementacion para un sorteo
 public class EjemploTreeSet {
+
     Set<Object> implementoLTreeSet = new TreeSet<>();
-
-
-
-    
 
     public void agregar(Object algo){ 
         implementoLTreeSet.add(algo);

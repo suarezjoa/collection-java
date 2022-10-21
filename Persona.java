@@ -4,6 +4,14 @@ public class Persona {
     public String Apellido;
     public int Edad;
 
+
+
+    public Persona(String nombre, String apellido, int edad) {
+        this.Nombre = nombre;
+        this.Apellido = apellido;
+        this.Edad = edad;
+    }
+
     public String getNombre() {
         return Nombre;
     }
@@ -20,19 +28,11 @@ public class Persona {
         Apellido = apellido;
     }
 
-    public String getEdad() {
+    public int getEdad() {
         return Edad;
     }
     
-    public void setEdad(String edad) {
+    public void setEdad(int edad) {
         Edad = edad;
     }
-
-    public persona(String nombre, String apellido, int edad) {
-        this.Nombre = nombre;
-        this.Apellido = apellido;
-        this.Edad = edad;
-    }
-
-    
 }

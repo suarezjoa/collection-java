@@ -1,6 +1,8 @@
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+
+import java.util.Enumeration;
 import java.util.Random;
 
 import org.junit.Test;
@@ -45,7 +47,7 @@ public class Tests {
 
         assertEquals(3,testseLinkedHashSet.nrosDeLaList());
 
-        testseLinkedHashSet.removerTodo();
+        //testseLinkedHashSet.removerTodo();
 
         assertEquals("[a, "+"c, "+"b, "+"d]",testseLinkedHashSet.mostrar());
 
@@ -55,16 +57,23 @@ public class Tests {
 
         EjemploTreeSet testsetTestTreeSet1 = new EjemploTreeSet();
 
-        for (int i=10 ; i>testsetTestTreeSet1.nrosDeLaList() ; i--){
-            testsetTestTreeSet1.agregar(i);
-        }
+        //for (int i=10 ; i>testsetTestTreeSet1.nrosDeLaList() ; i--){
+        //    testsetTestTreeSet1.agregar(i);
+        //}
+        testsetTestTreeSet1.agregar(1);
+        testsetTestTreeSet1.agregar(3);
+        testsetTestTreeSet1.agregar(5);
+        testsetTestTreeSet1.agregar(4);
+        testsetTestTreeSet1.agregar(1);
+        testsetTestTreeSet1.agregar(2);
+
 
         testsetTestTreeSet1.agregar(9);
-        testsetTestTreeSet1.remover(10);
+        testsetTestTreeSet1.remover(2);
 
-        assertEquals(true,testsetTestTreeSet1.existeElemento(7));
+        assertEquals(true,testsetTestTreeSet1.existeElemento(1));
 
-        testsetTestTreeSet1.removerTodo();
+        //testsetTestTreeSet1.removerTodo();
 
         assertEquals("[6, "+"7, "+"8, "+"9, "+ "18]",testsetTestTreeSet1.mostrar());
 
@@ -106,9 +115,19 @@ public class Tests {
     public void TestHasttable(){
 
         EjemploHastTable htpersona1 = new EjemploHastTable();
+        
+        Persona persona1 = new Persona("pancho","piedra",12);
+        Persona persona2 = new Persona("pepe","pipipi",18);
+        Persona persona3 = new Persona("nashe","dea",20);
 
-        Persona persona1 = new Persona("juan","peres",10);
+        htpersona1.agregar("soygood", persona1);
+        htpersona1.agregar("sicosiado", persona2);
+        htpersona1.agregar("dea", persona3);
 
+        htpersona1.eliminar("dea");
+
+        assertEquals(persona1,htpersona1.mostrarElemento("soygood"));
+        assertEquals(persona2 ,htpersona1.mostrarTabla());
 
     }
 }
