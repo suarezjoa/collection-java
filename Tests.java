@@ -21,11 +21,11 @@ public class Tests {
 
         assertEquals(false,testsetHash.existeElemento("a"));
 
-        testsetHash.remover("obj");
+        //testsetHash.remover("obj");
 
-        assertEquals(2,testsetHash.nrosDeLaList());
+        assertEquals(3,testsetHash.nrosDeLaList());
 
-        testsetHash.removerTodo();
+        //testsetHash.removerTodo();
 
         assertEquals("[obj, "+"obj2, "+"obj1]",testsetHash.mostrar());
     }
@@ -47,9 +47,9 @@ public class Tests {
 
         assertEquals(3,testseLinkedHashSet.nrosDeLaList());
 
-        //testseLinkedHashSet.removerTodo();
+        testseLinkedHashSet.removerTodo();
 
-        assertEquals("[a, "+"c, "+"b, "+"d]",testseLinkedHashSet.mostrar());
+        assertEquals("[]",testseLinkedHashSet.mostrar());
 
     }
     @Test
@@ -75,7 +75,7 @@ public class Tests {
 
         //testsetTestTreeSet1.removerTodo();
 
-        assertEquals("[6, "+"7, "+"8, "+"9, "+ "18]",testsetTestTreeSet1.mostrar());
+        assertEquals("[1, "+"3, "+"4, "+"5, "+ "9]",testsetTestTreeSet1.mostrar());
 
     }
     @Test
@@ -109,16 +109,19 @@ public class Tests {
 
         testabs.soloDejarCollection(testsetTestTreeSet1.getImplementoLTreeSet());
 
-        assertEquals("[1, "+"1, "+"1, "+"1, "+ "1]",testabs.mostrarABS());
+        assertEquals("[11, "+"12, "+"13]",testabs.mostrarABS());
     }
     @Test
     public void TestHasttable(){
 
         EjemploHastTable htpersona1 = new EjemploHastTable();
+
+
         
         Persona persona1 = new Persona("pancho","piedra",12);
         Persona persona2 = new Persona("pepe","pipipi",18);
         Persona persona3 = new Persona("nashe","dea",20);
+
 
         htpersona1.agregar("soygood", persona1);
         htpersona1.agregar("sicosiado", persona2);
@@ -127,7 +130,7 @@ public class Tests {
         htpersona1.eliminar("dea");
 
         assertEquals(persona1,htpersona1.mostrarElemento("soygood"));
-        assertEquals(persona2 ,htpersona1.mostrarTabla());
+        assertEquals(("["+persona2+", "+persona1+"]") ,htpersona1.mostrarTabla());
 
     }
 }
